@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+    <link rel="stylesheet" href="./style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+
+    <title>Contrate um dev</title><link rel="icon" type="image/png" href="./assets/code-logo.svg" />
+</head>
+<body>
+    <div id="window">
+        <div id="header">
+            <div id="buttons">
+                <svg xmlns="http://www.w3.org/2000/svg" width="126" height="30" viewBox="0 0 126 30" fill="none">
+                    <circle class="butOps" cx="15" cy="15" r="15" fill="#FF0000"/>
+                    <circle class="butOps" cx="15" cy="15" r="14.5" stroke="black" stroke-opacity="0.2"/>
+                    <circle class="butOps" cx="111" cy="15" r="15" fill="#00FF0A"/>
+                    <circle class="butOps" cx="111" cy="15" r="14.5" stroke="black" stroke-opacity="0.2"/>
+                    <circle class="butOps" cx="63" cy="15" r="15" fill="#FFE600"/>
+                    <circle class="butOps" cx="63" cy="15" r="14.5" stroke="black" stroke-opacity="0.2"/>
+                  </svg>
+            </div>
+            <div id="search">
+                <input type="text" id="buscaInput" placeholder="Search...">
+                <button id="buscaBtn">
+                    <ion-icon id="iconSearch" name="search-outline"></ion-icon>
+                </button>
+            </div>
+            <div id="switch">
+                <button onclick="toggle()"></button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

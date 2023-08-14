@@ -1,0 +1,184 @@
+*{
+    font-family: inter;
+}
+
+:root {
+    --text-color: rgb(0, 0, 0);
+    --bg-color: linear-gradient(220deg, rgba(79,79,79,1) 0%, rgba(127,127,127,1) 50%, rgba(79,79,79,1) 100%);
+    --window-color: #EBEBEB;
+    
+    --icon-button: url(./assets/sun.svg);
+    --position-button: 50%;
+    --animation-button-switch: slide-out 0.4s;
+}
+  
+.light{
+    --text-color: rgb(255, 255, 255);
+    --bg-color: #EBEBEB;
+    --window-color: rgba(79,79,79,1);
+    
+    --icon-button: url(./assets/stars.svg);
+    --position-button: 0%;
+    --animation-button-switch: slide-in 0.4s;
+}
+
+
+body{
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Janela da aplicação*/
+#window{
+    margin: 42px 20px 98px;
+    width: 1700px;
+    height: 700px;
+    border-radius: 20px;
+    background: var(--window-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+/**/
+
+/* Header div*/
+#header{
+    width: auto;
+    height: 70px;
+    display: flex;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 100px 100px 0px 0px;
+}
+/**/
+
+/* Botões coloridos*/
+#buttons{
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+    scale: 70%;
+    opacity: 100%;
+    transition: opacity 0.3s;
+}
+
+.butOps:hover{
+    opacity: 40%;
+}
+/**/
+
+/* Barra de busca*/
+#search{
+    border-radius: 100px;
+    margin: 50px;
+    width: 700px;
+    height: 30px;
+    display: flex;
+    align-self: center;
+    transition: background-color 0.3s;
+}
+
+#buscaInput {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 100px 0 0 100px;
+}
+
+#buscaBtn {
+    background-color: white;
+    border: none;
+    border-radius: 0 100px 100px 0;
+    color: white;
+    padding: 5px 13px 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#buscaBtn:hover {
+    background-color: #d1d1d1;
+}
+
+#iconSearch{
+    color: rgb(79,79,79);
+    font-size: 20px ;
+}
+
+#buscaTxt{
+    margin: 0px 0px 0px 4px;
+    font-size: 12px;
+    opacity: 50%;
+    display: flex;
+    align-self: center;
+}
+
+#search img{
+    opacity: 50%;
+    scale: 50%;
+    margin: 0px 0px 0px 10px;
+    display: flex;
+    align-items: center;
+}
+/**/
+
+/* switch theme mode*/
+#switch{
+    position: relative;
+    background-color: white;
+    border-radius: 100px;
+    margin: 8px;
+    width: 70px;
+    height: 30px;
+    display: flex;
+    align-self: center;
+}
+
+#switch button {
+    width: 36px;
+    height: 36px;
+    background: white var(--icon-button) no-repeat center;
+    border-radius: 50%;
+
+    top: 50%;
+    position: absolute;
+    right: var(--position-button);
+    animation: var(--animation-button-switch);
+    z-index: 1;
+    transform: translateY(-50%);
+}
+/**/
+
+
+
+/* Media query para telas menores que 900px */
+@media (max-width: 900px) {
+    #window {
+        font-size: 14px;
+    }
+    #search {
+        width: 100%;
+        margin: 20px;
+    }
+}
+/**/
+
+
+/*Animação para o switch theme mode*/
+@keyframes slide-in {
+    from {
+      right: 50%;
+    }
+    to {
+      right: 0%;
+    }
+  }
+  
+  @keyframes slide-out {
+    from {
+      right: 0%;
+    }
+    to {
+      right: 50%;
+    }
+  }
+  /**/
